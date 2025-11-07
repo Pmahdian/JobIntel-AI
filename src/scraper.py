@@ -27,6 +27,19 @@ def scrape_sample_data():
             quote_elements = soup.find_all('div', class_ =' quote')
             print(f"Found {len(quote_elements)} quotes")
 
+            # Extract quote data
+            quotes_data = []
+            for quote in quote_elements:
+                text = quote.find('span', class_ = 'text').text
+                author = quote.find('small', class_ = 'author').text
+                tags = [ tag.text for tag in quote.find_all('a', class_ = 'tag')]
+
+                quotes_data.append({
+                    'quote' : text,
+                    'author' : author,
+                    'tags' : tags
+                })
+
 
 
     
