@@ -8,3 +8,17 @@ def scrape_sample_data():
     Scrape sample quotes from quotes.toscrape.com 
     This is for practice before moving to real job sites
     """
+    try:
+        print('Starting web scraper...')
+
+        # URL for practice scraping
+        url = 'https://quotes.toscrape.com'
+
+        # Send GET request
+        response = requests.get(url)
+        print(f"Status codd: {response.status_code}")
+
+
+    
+
+    
