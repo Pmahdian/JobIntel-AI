@@ -44,6 +44,30 @@ def scrape_sample_data():
             # Create data directpry if it dosen't exist
             os.makedirs('data', exist_ok= True)
 
+            # Save to CSV
+            df = pd.DataFrame(quotes_data)
+            df.to_csv('data/sample_quotes.csv', index=False, encoding='utf-8')
+
+            print('Successfully saved data to data/sample_quotes.csv')
+            print("📊 Sample data:")
+            for i, item in enumerate(qoutes_data[:3], 1):
+                print(f"{i}.'{item['quote']}' - {item['author']}")
+
+            return quotes_data
+        
+        else:
+            print(f"❌ Failed to retrieve page. Status: {response.status_code}")
+            return []
+    
+    except Exception as e:
+        print(f'💥 Error occurred: {e}')
+        return []
+    
+if __name__ == "__main__":
+    scrape_sample_data()
+            
+
+
 
 
     
