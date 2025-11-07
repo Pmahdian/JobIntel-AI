@@ -50,7 +50,7 @@ def scrape_sample_data():
 
             print('Successfully saved data to data/sample_quotes.csv')
             print("📊 Sample data:")
-            for i, item in enumerate(qoutes_data[:3], 1):
+            for i, item in enumerate(quotes_data[:3], 1):
                 print(f"{i}.'{item['quote']}' - {item['author']}")
 
             return quotes_data
