@@ -41,6 +41,10 @@ def scrape_sample_data():
                 })
 
 
+            # Create data directpry if it dosen't exist
+            os.makedirs('data', exist_ok= True)
+
+
 
     
 
