@@ -20,7 +20,8 @@ def scrape_sample_data():
 
         # check if the request was seuccessful
         if response.status_code == 200:
-        # parse HTML content
+            # parse HTML content
+            soup = BeautifulSoup(response.content, 'html.parser')
 
 
 
