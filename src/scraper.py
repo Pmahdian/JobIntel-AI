@@ -18,6 +18,11 @@ def scrape_sample_data():
         response = requests.get(url)
         print(f"Status codd: {response.status_code}")
 
+        # check if the request was seuccessful
+        if response.status_code == 200:
+        # parse HTML content
+
+
 
     
 
