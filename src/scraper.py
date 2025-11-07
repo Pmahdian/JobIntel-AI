@@ -23,6 +23,10 @@ def scrape_sample_data():
             # parse HTML content
             soup = BeautifulSoup(response.content, 'html.parser')
 
+            # Find all quote elements
+            quote_elements = soup.find_all('div', class_ =' quote')
+            print(f"Found {len(quote_elements)} quotes")
+
 
 
     
